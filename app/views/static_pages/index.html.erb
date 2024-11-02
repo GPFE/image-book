@@ -1,0 +1,9 @@
+<%= form_with url: static_pages_path, method: :get do |form| %>
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+    <%= form.submit %>
+<% end %>
+
+<% @user_photos.each do |photo_url| %>
+    <%= image_tag(photo_url, alt: "flickr image")%>
+<% end %>
