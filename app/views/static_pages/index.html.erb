@@ -4,6 +4,8 @@
     <%= form.submit %>
 <% end %>
 
-<% @user_photos.each do |photo_url| %>
-    <%= image_tag(photo_url, alt: "flickr image")%>
+<% if @user_photos %>
+    <% @user_photos.each do |photo_url| %>
+        <%= image_tag(photo_url, alt: "flickr image")%>
+    <% end %>
 <% end %>
